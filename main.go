@@ -1,14 +1,12 @@
 package main
 
-import(
+import (
 	"fmt"
 	"net/http"
-
 )
 
 func main() {
-	http.HandleFunc("/", http.NotFoundHandler().ServeHTTP
-
+	http.HandleFunc("/", handler)
 	http.ListenAndServe(":8080", nil)
 
 }
